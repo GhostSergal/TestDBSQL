@@ -1,0 +1,7 @@
+{
+  "name": "TestDBSQL",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
