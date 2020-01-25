@@ -116,6 +116,12 @@ export class DatabaseService {
        this.loadAutores();
      })
    }
+   updateAutorB(nombre,genero,img,id){
+    let data= [nombre,genero,img,id];
+    return this.database.executeSql('UPDATE autor SET nombre = ?, genero = ?, img = ? WHERE id = ?',data).then(data =>{
+      this.loadAutores();
+    })
+  }
    addLibro(tituloy, autory){
      let data = [tituloy,autory];
      return this.database.executeSql('INSERT INTO obra(titulo,autorId) VALUES (?,?)', data).then(data=>{
