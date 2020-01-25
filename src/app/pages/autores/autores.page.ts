@@ -43,4 +43,11 @@ export class AutoresPage implements OnInit {
       console.log("Book added");
     })
   }
+  deleteAutorP(id){
+    this.db.deleteAutor(id)
+    .then(_=>{
+      this.autor={};
+      console.log("Author Deleted");
+    })
+  }
 }

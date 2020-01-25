@@ -38,6 +38,8 @@
           <ion-label>
             <h2>{{ aut.nombre }}</h2>
             <p>{{ aut.genero }}</p>
+            <ion-button color="secondary">Edit</ion-button>
+            <ion-button color="warning" (click)="deleteAutorP(aut.id)">Delete</ion-button>
           </ion-label>
         </ion-item>
       </ion-list>
@@ -59,6 +61,7 @@
         <ion-item *ngFor="let book of libros | async ">
           <ion-label>
             <h2>{{ book.titulo }}</h2>
+            <p>{{ book.autor }}</p>
           </ion-label>
         </ion-item>
       </ion-list>
